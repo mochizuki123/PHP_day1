@@ -7,7 +7,7 @@ $email = $_POST ["email"];
 $score = $_POST ["score"];
 $comment = $_POST ["comment"];
 
-$time = date("Y/m/d H:i:s");
+$time = date("Y/m/d");
 
 $data = $time . "/" . $voter .  "/" . $presenter . "/" . $email . "/" . $score . "/" . $comment . "\n";   // \nで改行
 file_put_contents("data/data.txt", $data, FILE_APPEND); // 上書きされないようにAppend
